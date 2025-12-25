@@ -23,7 +23,6 @@ function PixelTransition({
     style = {},
     href = "",
     aspectRatio = "100%",
-
 }: PixelTransitionProps) {
     const pixelGridRef = useRef(null);
     const activeRef = useRef(null);

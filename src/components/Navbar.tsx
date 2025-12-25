@@ -36,7 +36,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed top-5 left-0 z-50 w-full px-4">
+    <div className="fixed top-5 left-0 z-50 w-full px-4" data-aos="fade-down">
       <nav className="text-main-foreground p-5 border-border shadow-shadow rounded-base bg-white font-base mx-auto flex w-full max-w-[1300px] gap-5 border-2 px-5 text-sm sm:text-base">
         <div className="relative mx-auto flex w-full items-center justify-between text-foreground">
           <Link

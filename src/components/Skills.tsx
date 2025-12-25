@@ -75,20 +75,22 @@ const Skills = () => {
                      max-w-7xl">
                     {/* Skill Items */}
                     {skills.map((skill: Skill) => (
-                        <PixelTransition
-                            key={skill.id}
-                            aspectRatio="100%" 
-                            firstContent={
-                                <div className="flex items-center justify-center h-full w-full">
-                                    {iconMap[skill.name] || null}
-                                </div>
-                            }
-                            secondContent={
-                                <div className="flex items-center justify-center text-center h-full w-full p-4">
-                                    <h3 className="text-2xl font-bold">{skill.title}</h3>
-                                </div>
-                            }
-                        />
+                        <div data-aos="flip-left" key={skill.id}>
+                            <PixelTransition
+                                key={skill.id}
+                                aspectRatio="100%"
+                                firstContent={
+                                    <div className="flex items-center justify-center h-full w-full">
+                                        {iconMap[skill.name] || null}
+                                    </div>
+                                }
+                                secondContent={
+                                    <div className="flex items-center justify-center text-center h-full w-full p-4">
+                                        <h3 className="text-2xl font-bold">{skill.title}</h3>
+                                    </div>
+                                }
+                            />
+                        </div>
                     ))}
                 </div>
             </div>

@@ -76,7 +76,7 @@ export default function Milestones({id}: {id?: string}) {
   }, []);
 
   return (
-    <section id={id} className="max-w-full mx-auto md:max-w-4xl px-4 py-12">
+    <section id={id} className="max-w-full mx-auto md:max-w-4xl px-4 py-12" data-aos="zoom-in">
       {/* Header */}
       <div className="mb-12 text-center"> 
         <div className="inline-block bg-main border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-3 mb-4 -rotate-2 transform hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]
