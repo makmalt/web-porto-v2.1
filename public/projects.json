@@ -1,145 +1,170 @@
 [
-    {
+  {
+    "id": 10,
+    "title": "Portfolio v2.1",
+    "description": "Personal portfolio website showcasing projects, skills, and experience with a neobrutalism design and responsive layout.",
+    "image": "/assets/portfolio.png",
+    "techstack": [
+      {
         "id": 1,
-        "title": "Touratur.id",
-        "description": "A company profile website for Touratur.id, a travel company that operates in the tourism industry. It highlights destinations and services to make exploring easier and more exciting.",
-        "image": "/assets/touratur.png",
-        "techstack": [
-            {
-                "id": 1,
-                "name": "Astro"
-            },
-            {
-                "id": 2,
-                "name": "Tailwind"
-            },
-            {
-                "id": 3,
-                "name": "Alpine"
-            }
-        ],
-        "link": "https://touratur.id"
-    },
-    {
+        "name": "Next"
+      },
+      {
         "id": 2,
-        "title": "Clinic Data Center",
-        "description": "A web app project built to digitalize clinic data management for an internal company clinic. Designed to simplify access and organize healthcare information more efficiently.",
-        "image": "/assets/clinicdatacenter.png",
-        "techstack": [
-            {
-                "id": 1,
-                "name": ".NET"
-            },
-            {
-                "id": 2,
-                "name": "SqlServer"
-            },
-            {
-                "id": 3,
-                "name": "Bootstrap"
-            }
-        ],
-        "link": "https://github.com/makmalt/ClinicDataCenter"
-    },
-    {
+        "name": "Tailwind"
+      }
+    ],
+    "linkDemo": "https://makmalt.my.id",
+    "link": "https://github.com/makmalt/web-porto-v2.1"
+  },
+  {
+    "id": 1,
+    "title": "Touratur.id",
+    "description": "A company profile website for Touratur.id, a travel company that operates in the tourism industry. It highlights destinations and services to make exploring easier and more exciting.",
+    "image": "/assets/touratur.png",
+    "techstack": [
+      {
+        "id": 1,
+        "name": "Astro"
+      },
+      {
+        "id": 2,
+        "name": "Tailwind"
+      },
+      {
         "id": 3,
-        "title": "Aplikasi POS | Karya Hutama Oxygen",
-        "description": "A point-of-sale app made to support Karya Hutama Oxygen’s trading business. Helps manage sales, transactions, and daily operations in a more practical way.",
-        "image": "/assets/posapp.png",
-        "techstack": [
-            {
-                "id": 1,
-                "name": "Laravel"
-            },
-            {
-                "id": 2,
-                "name": "MySQL"
-            },
-            {
-                "id": 3,
-                "name": "Bootstrap"
-            },
-            {
-                "id": 4,
-                "name": "Flutter"
-            }
-        ],
-        "link": "https://github.com/makmalt/mobilepos_app"
-    },
-    {
+        "name": "Alpine"
+      }
+    ],
+    "linkDemo": "https://touratur.id",
+    "link": ""
+  },
+  {
+    "id": 2,
+    "title": "Clinic Data Center",
+    "description": "A web app project built to digitalize clinic data management for an internal company clinic. Designed to simplify access and organize healthcare information more efficiently.",
+    "image": "/assets/clinicdatacenter.png",
+    "techstack": [
+      {
+        "id": 1,
+        "name": ".NET"
+      },
+      {
+        "id": 2,
+        "name": "SqlServer"
+      },
+      {
+        "id": 3,
+        "name": "Bootstrap"
+      }
+    ],
+    "linkDemo": "",
+    "link": "https://github.com/makmalt/ClinicDataCenter"
+  },
+  {
+    "id": 3,
+    "title": "Aplikasi POS | Karya Hutama Oxygen",
+    "description": "A point-of-sale app made to support Karya Hutama Oxygen’s trading business. Helps manage sales, transactions, and daily operations in a more practical way.",
+    "image": "/assets/posapp.png",
+    "techstack": [
+      {
+        "id": 1,
+        "name": "Laravel"
+      },
+      {
+        "id": 2,
+        "name": "MySQL"
+      },
+      {
+        "id": 3,
+        "name": "Bootstrap"
+      },
+      {
         "id": 4,
-        "title": "Waktu Sholat",
-        "description": "A web application for the five daily prayer times for Muslims.",
-        "image": "/assets/waktusholat.webp",
-        "techstack": [
-            {
-                "id": 1,
-                "name": "Next"
-            },
-            {
-                "id": 2,
-                "name": "Tailwind"
-            }
-        ],
-        "link": "https://github.com/makmalt/waktu-sholat"
-    },
-    {
-        "id": 5,
-        "title": "Oxygen Tracking App",
-        "description": "A tracking web app for daily transaction oxygen bottle in Karya Hutama Oxygen. Including tracking bottle status.",
-        "image": "/assets/posapp.png",
-        "techstack": [
-            {
-                "id": 1,
-                "name": "Laravel"
-            },
-            {
-                "id": 2,
-                "name": "MySQL"
-            },
-            {
-                "id": 3,
-                "name": "Bootstrap"
-            }
-        ],
-        "link": "https://github.com/makmalt/mobilepos_app"
-    },
-    {
-        "id": 6,
-        "title": "Academate",
-        "description": "A mobile app that help students to rent a mentor for their study. It connects students with mentors to facilitate learning and academic support.",
-        "image": "/assets/academate.png",
-        "techstack": [
-            {
-                "id": 1,
-                "name": "Kotlin"
-            },
-            {
-                "id": 2,
-                "name": "Firebase"
-            }
-        ],
-        "link": "https://github.com/makmalt/AcadeMate-fix"
-    },
-    {
-        "id": 7,
-        "title": "Cek Gudang",
-        "description": "A web app that helps users to check the availability of goods in a warehouse. It provides a user-friendly interface for inventory management and stock checking.",
-        "image": "/assets/cekgudang.png",
-        "techstack": [
-            {
-                "id": 1,
-                "name": "Laravel"
-            },
-            {
-                "id": 2,
-                "name": "MySQL"
-            },
-            {
-                "id": 3,
-                "name": "Bootstrap"
-            }
-        ],
-        "link": "https://github.com/makmalt/project-web"
-    }
+        "name": "Flutter"
+      }
+    ],
+    "linkDemo": "",
+    "link": "https://github.com/makmalt/mobilepos_app"
+  },
+  {
+    "id": 4,
+    "title": "Waktu Sholat",
+    "description": "A web application for the five daily prayer times for Muslims.",
+    "image": "/assets/waktusholat.webp",
+    "techstack": [
+      {
+        "id": 1,
+        "name": "Next"
+      },
+      {
+        "id": 2,
+        "name": "Tailwind"
+      }
+    ],
+    "linkDemo": "https://waktusholat-indo.vercel.app/",
+    "link": "https://github.com/makmalt/waktu-sholat"
+  },
+  {
+    "id": 5,
+    "title": "Oxygen Tracking App",
+    "description": "A tracking web app for daily transaction oxygen bottle in Karya Hutama Oxygen. Including tracking bottle status.",
+    "image": "/assets/posapp.png",
+    "techstack": [
+      {
+        "id": 1,
+        "name": "Laravel"
+      },
+      {
+        "id": 2,
+        "name": "MySQL"
+      },
+      {
+        "id": 3,
+        "name": "Bootstrap"
+      }
+    ],
+    "linkDemo": "",
+    "link": "https://github.com/makmalt/mobilepos_app"
+  },
+  {
+    "id": 6,
+    "title": "Academate",
+    "description": "A mobile app that help students to rent a mentor for their study. It connects students with mentors to facilitate learning and academic support.",
+    "image": "/assets/academate.png",
+    "techstack": [
+      {
+        "id": 1,
+        "name": "Kotlin"
+      },
+      {
+        "id": 2,
+        "name": "Firebase"
+      }
+    ],
+    "linkDemo": "",
+    "link": "https://github.com/makmalt/AcadeMate-fix"
+  },
+  {
+    "id": 7,
+    "title": "Cek Gudang",
+    "description": "A web app that helps users to check the availability of goods in a warehouse. It provides a user-friendly interface for inventory management and stock checking.",
+    "image": "/assets/cekgudang.png",
+    "techstack": [
+      {
+        "id": 1,
+        "name": "Laravel"
+      },
+      {
+        "id": 2,
+        "name": "MySQL"
+      },
+      {
+        "id": 3,
+        "name": "Bootstrap"
+      }
+    ],
+    "linkDemo": "",
+    "link": "https://github.com/makmalt/project-web"
+  }
 ]

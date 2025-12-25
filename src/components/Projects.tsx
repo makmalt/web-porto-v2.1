@@ -9,6 +9,7 @@ type Project = {
   title: string;
   description: string;
   image: string;
+  linkDemo: string;
   link: string;
   techstack: Techstack[];
 };
@@ -110,7 +111,7 @@ const iconMap2: iconMapType = {
 };
 
 const Projects = ({ id }: { id?: string }) => {
-  const [projects, setProject] = useState([]);
+  const [projects, setProject] = useState<Project[]>([]);
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -128,7 +129,7 @@ const Projects = ({ id }: { id?: string }) => {
     <>
       <div id={id} className="flex flex-col">
         <div className="mb-12 text-center">
-          <div className="inline-block bg-main border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-3 mb-4 rotate-3 transform hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]
+          <div className="inline-block bg-yellow-400 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-3 mb-4 rotate-3 transform hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]
                             transition-all duration-300 p-6">
             <h2 className="text-4xl md:text-5xl font-black text-black">
               Projects I've Done
@@ -141,7 +142,7 @@ const Projects = ({ id }: { id?: string }) => {
                     md:grid-cols-2 
                     lg:grid-cols-3"
         >
-          {projects.map((project: Project) => (
+          {projects.map((project) => (
             <Card key={project.id} className="h-148 bg-white transition-all duration-300 hover:scale-105 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] border-4 border-black">
               <div className="flex flex-col gap-4 h-full">
                 <Image src={project.image} className="h-64 border-b" alt={project.title} width={500} height={96} />
@@ -171,17 +172,26 @@ const Projects = ({ id }: { id?: string }) => {
                 </div>
 
                 <div className="flex justify-end gap-2 me-2 mt-auto">
-                  <Button asChild className="w-1/3" variant="neutral"
+                  <Button
+                    className="w-1/3"
+                    variant="neutral"
+                    disabled={!project.linkDemo}
+                    asChild={!!project.linkDemo}
                   >
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View
-                    </a>
+                    {project.linkDemo ? (
+                      <a
+                        href={project.linkDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View
+                      </a>
+                    ) : (
+                      <span>View</span>
+                    )}
                   </Button>
-                  <Button asChild className="w-1/3">
+
+                  <Button disabled={!project.link} asChild={!!project.link} className="w-1/3">
                     <a
                       href={project.link}
                       target="_blank"

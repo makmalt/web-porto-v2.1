@@ -3,6 +3,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import { Button } from "@/src/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,12 +39,12 @@ export default function Navbar() {
     <div className="fixed top-5 left-0 z-50 w-full px-4">
       <nav className="text-main-foreground p-5 border-border shadow-shadow rounded-base bg-white font-base mx-auto flex w-full max-w-[1300px] gap-5 border-2 px-5 text-sm sm:text-base">
         <div className="relative mx-auto flex w-full items-center justify-between text-foreground">
-          <a
-            className="text-[22px] size-8 rounded-base flex bg-main text-main-foreground border-2 border-black items-center justify-center font-heading"
-            href="/"
+          <Link
+            className="text-2xl size-8 rounded-base flex bg-red-600 text-main-foreground border-2 border-black items-center justify-center font-heading px-12 py-5"
+            href="#home"
           >
-            AK
-          </a>
+            Akmal
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-7 absolute left-1/2 -translate-x-1/2">
@@ -52,7 +53,7 @@ export default function Navbar() {
                 <a
                   key={link.path}
                   className={clsx(
-                    "text-xl hover:-translate-y-1 hover:rotate-2 font-bold transition-transform"
+                    "text-2xl hover:-translate-y-1 hover:rotate-2 font-bold transition-transform"
                   )}
                   href={link.path}
                 >
@@ -68,7 +69,7 @@ export default function Navbar() {
               className="bg-yellow-400 text-black hover:bg-yellow-600"
               asChild
             >
-              <a href="#footer" className="text-lg font-semibold">Get In Touch</a>
+              <a href="#footer" className="text-xl font-bold">Get In Touch</a>
             </Button>
           </div>
 
@@ -101,10 +102,10 @@ export default function Navbar() {
                 );
               })}
               <Button
-                className="bg-gray-700 text-white hover:bg-gray-600 w-full"
+                className="bg-yellow-400 text-black hover:bg-yellow-600 w-full"
                 asChild
               >
-                <a href="/contact" onClick={closeMenu}>
+                <a href="#footer" onClick={closeMenu}>
                   Get In Touch
                 </a>
               </Button>

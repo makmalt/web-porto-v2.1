@@ -60,7 +60,7 @@ const Skills = () => {
             <div className="mt-10 flex flex-col">
                 <div className="mb-12 text-center">
                     <div
-                        className="inline-block bg-main border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-3 mb-4 transform hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]
+                        className="inline-block bg-red-500 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-3 mb-4 transform hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]
                             transition-all duration-300 p-6"
                     >
                         <h2 className="text-4xl md:text-5xl font-black text-black">

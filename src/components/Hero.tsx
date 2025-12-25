@@ -1,10 +1,10 @@
 import { Button } from "@/src/components/ui/button";
 import TextType from "./animate/TextType";
+import Image from "next/image";
 
-const HeroSection = ({id}: {id?: string}) => {
+const HeroSection = ({ id }: { id?: string }) => {
   return (
     <div id={id} className="relative w-11/12 lg:w-11/12 xl:w-10/12 mx-auto py-16 mb-4 overflow-hidden lg:h-130">
-      {/* Background dengan kotak-kotak */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.15)_1px,transparent_1px)] bg-[size:60px_60px]" />
       {/* Content */}
       <div className="relative grid grid-cols-10 gap-10">
@@ -41,18 +41,22 @@ const HeroSection = ({id}: {id?: string}) => {
         </div>
 
         <div className="col-span-10 md:col-span-4 lg:col-span-4">
-          <div className="relative w-full max-w-md mx-auto">
+          <div className="relative w-full max-w-md mx-auto  transition-all hover:scale-101 duration-300">
             {/* Multiple Border Layers for Depth */}
             <div className="absolute inset-0 bg-blue-500 translate-x-4 translate-y-4 border-4 border-black" />
             <div className="absolute inset-0 bg-pink-400 translate-x-2 translate-y-2 border-4 border-black" />
 
             {/* Main Image Container */}
-            <div className="relative h-100 bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
-              <img
-                src="/fotobio.png"
-                className="w-full h-auto mix-blend-multiply object-cover"
+            <div className="relative h-[400px] bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+              <Image
+                src="/fotobio-2.jpeg"
                 alt="Akmal Thoriq"
+                width={400}
+                height={500}
+                className="w-full h-full object-cover object-[50%_60%] mix-blend-multiply"
               />
+
+
 
               {/* Corner Accent */}
               <div className="absolute top-0 right-0 w-16 h-16 bg-yellow-400 border-l-4 border-b-4 border-black" />
