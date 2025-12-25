@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "React",
+    "title": "ReactJs"
+  },
+  {
+    "id": 2,
+    "name": ".NET",
+    "title": ".NET"
+  },
+
+  {
+    "id": 3,
+    "name": "MySQL",
+    "title": "MySQL"
+  },
+  {
+    "id": 4,
+    "name": "Bootstrap",
+    "title": "Bootstrap"
+  },
+
+  {
+    "id": 6,
+    "name": "SqlServer",
+    "title": "SqlServer"
+  },
+
+  {
+    "id": 7,
+    "name": "Next",
+    "title": "Next"
+  },
+  {
+    "id": 8,
+    "name": "Tailwind",
+    "title": "Tailwind"
+  },
+  {
+    "id": 9,
+    "name": "Laravel",
+    "title": "Laravel"
+  }
+]

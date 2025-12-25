@@ -1,0 +1,36 @@
+ [
+  {
+    "id": 1,
+    "year": "2021",
+    "title": "Graduated from High School — MBI Amanatul Ummah",
+    "place": "Mojokerto, ID",
+    "description": "Wrapped up high school and started exploring the tech world.",
+    "icon": "FaUserGraduate"
+  },
+  {
+    "id": 2,
+    "year": "2021",
+    "title": "Started Informatics Engineering at Universitas Brawijaya",
+    "place": "Malang, ID",
+    "description":
+      "Began studying Computer Science, explored multiple programming languages and frameworks, and developed several projects to strengthen my skills.",
+    "icon": "FiBookOpen"
+  },
+  {
+    "id": 3,
+    "year": "2024",
+    "title": "Internship at Kalbe — Web Developer",
+    "place": "Jakarta, ID",
+    "description":
+      "Worked as full-stack web developer (ASP.NET + SQL Server). Delivered clinic digitalization web.",
+    "icon": "FaLaptopCode"
+  },
+  {
+    "id": 4,
+    "year": "2025",
+    "title": "Graduated — Bachelor of Informatics (S1) Brawijaya University",
+    "place": "Malang, ID",
+    "description": "Finished degree with focus on web development.",
+    "icon": "FiAward"
+  }
+]
