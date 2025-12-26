@@ -3,7 +3,11 @@
 import { useEffect } from "react";
 import AOS from "aos";
 
-export default function Providers({ children }) {
+type ProvidersProps = {
+    children: React.ReactNode;
+};
+
+export default function Providers({ children }: ProvidersProps) {
     useEffect(() => {
         AOS.init({
             duration: 300,
