@@ -30,7 +30,7 @@ type Milestone = {
 };
 
 
-function Dot({ Icon }: { Icon: React.ComponentType }) {
+function Dot({ Icon }: { Icon: React.ComponentType<{ className?: string; color?: string }> }) {
   return (
     <div className="relative z-10 inline-flex h-12 w-12 items-center justify-center bg-main border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
       <Icon className="h-6 w-6" color="black" />

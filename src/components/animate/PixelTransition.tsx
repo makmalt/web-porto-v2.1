@@ -24,15 +24,23 @@ function PixelTransition({
     href = "",
     aspectRatio = "100%",
 }: PixelTransitionProps) {
-    const pixelGridRef = useRef(null);
-    const activeRef = useRef(null);
-    const delayedCallRef = useRef(null);
-    const [isActive, setIsActive] = useState(false);
+    const pixelGridRef = useRef<HTMLDivElement | null>(null);
+    const activeRef = useRef<HTMLDivElement | null>(null);
+    const delayedCallRef = useRef<gsap.core.Tween | null>(null);
 
-    const isTouchDevice =
-        "ontouchstart" in window ||
-        navigator.maxTouchPoints > 0 ||
-        window.matchMedia("(pointer: coarse)").matches;
+    const [isActive, setIsActive] = useState(false);
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+    // ✅ SAFE: cuma jalan di client
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+
+        setIsTouchDevice(
+            "ontouchstart" in window ||
+            navigator.maxTouchPoints > 0 ||
+            window.matchMedia("(pointer: coarse)").matches
+        );
+    }, []);
 
     useEffect(() => {
         const el = pixelGridRef.current;
@@ -57,11 +65,12 @@ function PixelTransition({
         }
     }, [gridSize, pixelColor]);
 
-    const animatePixels = (activate) => {
+    const animatePixels = (activate: boolean) => {
         setIsActive(activate);
 
         const pixels = pixelGridRef.current?.children;
         const activeEl = activeRef.current;
+
         if (!pixels || !activeEl) return;
 
         gsap.killTweensOf(pixels);
@@ -92,20 +101,16 @@ function PixelTransition({
     return (
         <div
             className={`
-    ${className}
-    border-4
-    border-black
-    shadow-[6px_6px_0_0_black]
-    w-[160px]
-    relative
-    overflow-hidden
-    transition-all
-    duration-200
-    hover:-translate-x-1
-    hover:-translate-y-1
-    hover:shadow-[10px_10px_0_0_black]
-    ${isActive ? "bg-blue-400" : "bg-white"}
-  `}
+        ${className}
+        border-4 border-black
+        shadow-[6px_6px_0_0_black]
+        w-[160px]
+        relative overflow-hidden
+        transition-all duration-200
+        hover:-translate-x-1 hover:-translate-y-1
+        hover:shadow-[10px_10px_0_0_black]
+        ${isActive ? "bg-blue-400" : "bg-white"}
+      `}
             style={style}
             onMouseEnter={!isTouchDevice ? () => !isActive && animatePixels(true) : undefined}
             onMouseLeave={!isTouchDevice ? () => isActive && animatePixels(false) : undefined}
@@ -133,7 +138,7 @@ function PixelTransition({
                 className="absolute inset-0 pointer-events-none z-[3]"
             />
 
-            {/* Neo brutal accent */}
+            {/* Accent */}
             <div className="absolute top-0 right-0 w-6 h-6 bg-red-500 border-l-4 border-b-4 border-black z-[4]" />
         </div>
     );
