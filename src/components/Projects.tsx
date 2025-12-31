@@ -143,7 +143,7 @@ const Projects = ({ id }: { id?: string }) => {
                     lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <Card data-aos="zoom-in" key={project.id} className="h-148 bg-white transition-all duration-300 hover:scale-105 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] border-4 border-black">
+            <Card data-aos="zoom-in" key={project.id} className="h-148 bg-white transition-all transform duration-300 hover:scale-105 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] border-4 border-black">
               <div className="flex flex-col gap-4 h-full">
                 <Image src={project.image} className="h-64 border-b" alt={project.title} width={500} height={96} />
 

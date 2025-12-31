@@ -61,7 +61,7 @@ function Card({ year, title, place, description }: { year: string; title: string
   );
 }
 
-export default function Milestones({id}: {id?: string}) {
+export default function Milestones({ id }: { id?: string }) {
   const [milestones, setMilestones] = useState([]);
   useEffect(() => {
     // Fetching data from an API or local JSON
@@ -78,11 +78,11 @@ export default function Milestones({id}: {id?: string}) {
   return (
     <section id={id} className="max-w-full mx-auto md:max-w-4xl px-4 py-12" data-aos="zoom-in">
       {/* Header */}
-      <div className="mb-12 text-center"> 
+      <div className="mb-12 text-center">
         <div className="inline-block bg-main border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-3 mb-4 -rotate-2 transform hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]
                             transition-all duration-300 p-6">
           <h2 className="text-4xl md:text-5xl font-black text-black">
-            My Journey 🚀
+            My Journey
           </h2>
         </div>
         <p className="text-xl font-bold text-black mt-4">
