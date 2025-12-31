@@ -30,8 +30,7 @@ const HeroSection = ({ id }: { id?: string }) => {
 
             {/* CTA Section*/}
             <div className="font-publicSans mt-16 w-fit">
-              <p className="my-2">Discover the future of Learning-Today</p>
-              <a href="/explore">
+              <a href="Cv.pdf" download>
                 <Button size="lg" className="h-14 px-8 text-[1.1rem]">
                   Download CV
                 </Button>
