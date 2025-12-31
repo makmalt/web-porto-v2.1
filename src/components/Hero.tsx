@@ -30,7 +30,7 @@ const HeroSection = ({ id }: { id?: string }) => {
 
             {/* CTA Section*/}
             <div className="font-publicSans mt-16 w-fit">
-              <a href="Cv.pdf" download>
+              <a href="Cv.pdf" className="cursor-pointer" download>
                 <Button size="lg" className="h-14 px-8 text-[1.1rem]">
                   Download CV
                 </Button>
