@@ -5,7 +5,7 @@ import Image from "next/image";
 const HeroSection = ({ id }: { id?: string }) => {
   return (
     <div id={id} className="relative w-11/12 lg:w-11/12 xl:w-10/12 mx-auto py-16 mb-4 overflow-hidden lg:h-130">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.15)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.15)_1px,transparent_1px)] bg-size-[60px_60px]" />
       {/* Content */}
       <div className="relative grid grid-cols-10 gap-10">
         <div className="col-span-10 md:col-span-6 lg:col-span-6 mt-2 md:mt-10 ">
@@ -46,7 +46,7 @@ const HeroSection = ({ id }: { id?: string }) => {
             <div className="absolute inset-0 bg-pink-400 translate-x-2 translate-y-2 border-4 border-black" />
 
             {/* Main Image Container */}
-            <div className="relative h-[400px] bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+            <div className="relative h-100 bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
               <Image
                 src="/fotobio-2.jpeg"
                 alt="Akmal Thoriq"

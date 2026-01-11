@@ -132,7 +132,7 @@ const Projects = ({ id }: { id?: string }) => {
           <div className="inline-block bg-yellow-400 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-3 mb-4 rotate-3 transform hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]
                             transition-all duration-300 p-6">
             <h2 className="text-4xl md:text-5xl font-black text-black">
-              Projects I've Done
+              Projects I&apos;ve Done
             </h2>
           </div>
         </div>
@@ -143,66 +143,68 @@ const Projects = ({ id }: { id?: string }) => {
                     lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <Card data-aos="zoom-in" key={project.id} className="h-148 bg-white transition-all transform duration-300 hover:scale-105 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] border-4 border-black">
-              <div className="flex flex-col gap-4 h-full">
-                <Image src={project.image} className="h-64 border-b" alt={project.title} width={500} height={96} />
+            <div key={project.id} data-aos="fade-up">
+              <Card className="h-148 bg-white transition-transform duration-250 hover:scale-105 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] border-4 border-black">
+                <div className="flex flex-col gap-4 h-full">
+                  <Image src={project.image} className="h-64 border-b" alt={project.title} width={500} height={96} />
 
-                <p className="mx-2 text-justify text-lg font-bold">
-                  {project.title}
-                </p>
-                <p className="mx-2 text-justify">
-                  {project.description}
-                </p>
-                {/*layar desktop */}
-                <div className="hidden lg:block">
-                  <div className="flex justify-start gap-2 ms-2">
-                    {project.techstack.map((tech: Techstack) => (
-                      <div key={`desktop-${tech.id}`}>{iconMap1[tech.name]}</div>
-                    ))}
+                  <p className="mx-2 text-justify text-lg font-bold">
+                    {project.title}
+                  </p>
+                  <p className="mx-2 text-justify">
+                    {project.description}
+                  </p>
+                  {/*layar desktop */}
+                  <div className="hidden lg:block">
+                    <div className="flex justify-start gap-2 ms-2">
+                      {project.techstack.map((tech: Techstack) => (
+                        <div key={`desktop-${tech.id}`}>{iconMap1[tech.name]}</div>
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                {/* layar mobile */}
-                <div className="block lg:hidden">
-                  <div className="flex justify-start gap-2 ms-2">
-                    {project.techstack.map((tech: Techstack) => (
-                      <div key={`mobile-${tech.id}`}>{iconMap2[tech.name]}</div>
-                    ))}
+                  {/* layar mobile */}
+                  <div className="block lg:hidden">
+                    <div className="flex justify-start gap-2 ms-2">
+                      {project.techstack.map((tech: Techstack) => (
+                        <div key={`mobile-${tech.id}`}>{iconMap2[tech.name]}</div>
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex justify-end gap-2 me-2 mt-auto">
-                  <Button
-                    className="w-1/3"
-                    variant="neutral"
-                    disabled={!project.linkDemo}
-                    asChild={!!project.linkDemo}
-                  >
-                    {project.linkDemo ? (
+                  <div className="flex justify-end gap-2 me-2 mt-auto">
+                    <Button
+                      className="w-1/3"
+                      variant="neutral"
+                      disabled={!project.linkDemo}
+                      asChild={!!project.linkDemo}
+                    >
+                      {project.linkDemo ? (
+                        <a
+                          href={project.linkDemo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View
+                        </a>
+                      ) : (
+                        <span>View</span>
+                      )}
+                    </Button>
+
+                    <Button disabled={!project.link} asChild={!!project.link} className="w-1/3">
                       <a
-                        href={project.linkDemo}
+                        href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        View
+                        Link Repo
                       </a>
-                    ) : (
-                      <span>View</span>
-                    )}
-                  </Button>
-
-                  <Button disabled={!project.link} asChild={!!project.link} className="w-1/3">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Link Repo
-                    </a>
-                  </Button>
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
           ))}
         </div>
       </div>
