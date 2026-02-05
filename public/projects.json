@@ -1,5 +1,23 @@
 [
   {
+    "id": 11,
+    "title": "Kommerce",
+    "description": "An e-commerce platform designed to provide a seamless shopping experience with a modern and intuitive interface.",
+    "image": "/assets/kommerce.png",
+    "techstack": [
+      {
+        "id": 1,
+        "name": "Next"
+      },
+      {
+        "id": 2,
+        "name": "Tailwind"
+      }
+    ],
+    "linkDemo": "https://new-kommerce.vercel.app",
+    "link": ""
+  },
+  {
     "id": 10,
     "title": "Portfolio v2.1",
     "description": "Personal portfolio website showcasing projects, skills, and experience with a neobrutalism design and responsive layout.",
