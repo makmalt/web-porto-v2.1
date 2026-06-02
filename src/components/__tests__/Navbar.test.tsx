@@ -32,7 +32,7 @@ describe("Navbar", () => {
     const user = userEvent.setup();
     render(<Navbar />);
 
-    const menuButton = screen.getByRole("button", { name: "Toggle menu" });
+    const menuButton = screen.getAllByRole("button", { name: "Toggle menu" })[0];
     expect(screen.queryAllByRole("link", { name: "Education" })).toHaveLength(1);
 
     await user.click(menuButton);
